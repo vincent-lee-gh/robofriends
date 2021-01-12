@@ -71,12 +71,13 @@
 .menu-btn{
   padding: .5em 0em;
   text-align: center;
+  
   /* align-self: flex-start; */
   /* justify-content: center; */
   
 }
 
-.menu-btn button{
+.menu-btn button , a{
   height: 3.5em;
   width: 3.5em;
   text-align:center;
@@ -85,8 +86,7 @@
   background:none;
   border:none;
   outline-style:none;
-  position: sticky;
-  top: -10;
+  color:black;
 }
 
 .menu-btn :hover {

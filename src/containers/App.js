@@ -4,7 +4,7 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
-import { CgMenuRight } from "react-icons/cg";
+import { SiGithub } from "react-icons/si";
 // import { ReactComponent } from '*.svg';
 // import { render } from '@testing-library/react';
 
@@ -54,7 +54,7 @@ componentDidMount(){
                 </div>
             </div>
             <div className='menu-btn'>
-              <button><CgMenuRight size='2.5em' /></button>
+              <button><a href="https://github.com/vincent-lee-gh" target="_blank"><SiGithub size='2.5em' /></a> </button>
               
             </div>
             
