@@ -1,3 +1,7 @@
+:root{
+  --hover-color:  rgb(132, 255, 235);
+}
+
 .App {
   text-align: center;
 }
@@ -69,30 +73,43 @@
 }
 
 .menu-btn{
-  padding: .5em 0em;
-  text-align: center;
+  margin: auto;
+  height: 3.5em;
+  width: 3.5em;
   
+  text-align: center;
+  border-radius: .5em;
   /* align-self: flex-start; */
   /* justify-content: center; */
-  
+  background-color:rgba(255, 255, 255, 0);
+  border-radius: .5em;
+  transition: background-color 230ms ease-in-out;
+}
+
+.menu-btn:hover {
+  background-color: var(--hover-color);
 }
 
 .menu-btn button , a{
-  height: 3.5em;
-  width: 3.5em;
-  text-align:center;
   margin: auto;
+  text-align:center;
   cursor: pointer;
   background:none;
   border:none;
   outline-style:none;
   color:black;
+  padding: .5em 0;
 }
 
-.menu-btn :hover {
-  background-color: aquamarine;
-  border-radius: .5em;
-  /* outline-style:dotted; */
+
+@keyframes Hover {
+  from{
+    background-color: none;
+  }
+  to{
+    background-color: var(--hover-color);
+  }
+
 }
 
 
