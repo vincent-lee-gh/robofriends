@@ -136,14 +136,20 @@
 
 
 .cardList{
-  display: flex;
-  margin: 0;
+  margin: auto;
   width: 99vw;
   /* overflow-x:scroll; */
-  justify-content:space-between;
 }
 
 .cardList ::-webkit-scrollbar {
   width: 0em;
+}
+
+.noResult {
+  display:flex;
+  /* height: 100vh;
+  justify-content:space-around;
+  vertical-align: middle; */
+  margin: 0 .5em;
 }
 
