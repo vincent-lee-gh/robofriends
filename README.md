@@ -1,5 +1,5 @@
 # robofriends
-Tutorial for udemy course - React
+# A react web app from aneagoie/robofriends
 
-Link to the page
+Link to my app
 https://vincent-lee-gh.github.io/robofriends/
