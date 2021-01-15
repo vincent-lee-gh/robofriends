@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import  CardList  from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 import { SiGithub } from "react-icons/si";
+import Sidebar from '../components/Sidebar';
+
 // import { ReactComponent } from '*.svg';
 // import { render } from '@testing-library/react';
 
@@ -53,8 +56,13 @@ componentDidMount(){
                   <SearchBox searchChange={this.onSearchChange} />
                 </div>
             </div>
-            <div className='menu-btn'>
-              <button><a href="https://github.com/vincent-lee-gh" target="_blank"><SiGithub size='2.5em' /></a> </button>
+            <div className='g-right' >
+              <Router>
+                <div >
+                  <Sidebar  />
+                </div>
+              </Router>
+              {/* <button><a href="https://github.com/vincent-lee-gh" target="_blank"><SiGithub size='2.5em' /></a> </button> */}
               
             </div>
             
