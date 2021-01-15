@@ -2,10 +2,9 @@
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
-import * as BiIcons from 'react-icons/bi';
 import * as RiIcons from 'react-icons/ri';
 import * as SiIcons from 'react-icons/si';
-
+import * as BiIcons from 'react-icons/bi';
 
 export const SidebarData = [
   {
@@ -15,10 +14,12 @@ export const SidebarData = [
   },
   {
     title: 'Info',
-    path: '/info',
+    path: '/info' ,
+    link: 'https://vincent-lee-gh.github.io/robofriends/',
+    // https://vincent-lee-gh.github.io/robofriends/
     icon: <FaIcons.FaInfoCircle />,
     iconClosed: <RiIcons.RiArrowDownFill />,
-    iconOpen: <RiIcons.RiArrowUpFill />,
+    iconOpened: <RiIcons.RiArrowUpFill />,
     subNav: [
       {
         title: 'About',
@@ -36,6 +37,7 @@ export const SidebarData = [
         icon:  <SiIcons.SiGithub />,
       },
     ],
-  }
+  },
+  
 ]
 

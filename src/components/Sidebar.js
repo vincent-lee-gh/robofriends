@@ -6,6 +6,8 @@ import * as CgIcons from 'react-icons/cg';
 import * as AiIcons from 'react-icons/ai';
 import * as RiIcons from 'react-icons/ri';
 import {SidebarData} from './SidebarData';
+import SubMenu from './SubMenu';
+import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
   opacity: ${({ sidebar }) => (sidebar ? '0' : '100%' )};
@@ -22,10 +24,12 @@ const SidebarNav = styled.div `
   background: #35353530;
   width: 250px;
   height: 100vh;
+  border-radius: 50px 0 0 50px ;
+
   backdrop-filter: blur(5px);
 
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   position: fixed;
   z-index: 10;
   right: ${({ sidebar }) => (sidebar ? '0' : '-100%' )};
@@ -50,6 +54,13 @@ const SiderbarWrap = styled.div `
   /* z-index: 1; */
 `;
 
+const SubMenuWrapper = styled.div `
+  margin-top: 100px;
+  height: 100vh;
+  /* background-color: rgb(255,255,255,0); */
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+`;
 
 const Sidebar = () => {
 
@@ -78,7 +89,16 @@ const Sidebar = () => {
               </div>
               </NavIcon>
             </SiderbarWrap>
-        </SidebarNav>
+            <SubMenuWrapper>
+              {SidebarData.map( (item, index) => {
+                return <SubMenu item={item} key={index} />
+                }
+              )}
+            </SubMenuWrapper>
+            
+
+      </SidebarNav>
+
         <TranspClosed sidebar={sidebar} onClick={showSidebar}>  
         </TranspClosed>
     </div>
