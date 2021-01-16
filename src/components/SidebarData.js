@@ -14,7 +14,7 @@ export const SidebarData = [
   },
   {
     title: 'Info',
-    path: '/info' ,
+    // path: '' ,
     // link: 'https://vincent-lee-gh.github.io/robofriends/',
     // https://vincent-lee-gh.github.io/robofriends/
     icon: <FaIcons.FaInfoCircle />,
@@ -24,20 +24,18 @@ export const SidebarData = [
       {
         title: 'About',
         path: '/info/about',
-        link: '',
         icon:  <BiIcons.BiGlasses />,
       },
       {
         title: 'Repo',
         path: 'https://github.com/vincent-lee-gh/robofriends/tree/main',
-        link: 'https://github.com/vincent-lee-gh/robofriends/tree/main',
+        // link: 'https://github.com/vincent-lee-gh/robofriends/tree/main',
         // path: '/info/repo',
         icon:  <BiIcons.BiGitRepoForked />,
       },
       {
         title: 'MyGithub',
-        path: '/info/github',
-        link: '',
+        path: 'https://github.com/vincent-lee-gh',
         icon:  <SiIcons.SiGithub />,
       },
     ],

@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+// import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+// import Sidebar from '../components/Sidebar';
 import  CardList  from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 import { SiGithub } from "react-icons/si";
-import Sidebar from '../components/Sidebar';
+
 
 // import { ReactComponent } from '*.svg';
 // import { render } from '@testing-library/react';
@@ -48,26 +49,16 @@ componentDidMount(){
         </div>)
     }else{
       return(
+
         <div >
-          <div className='headline' >
-            <div className='g-left'>
-              <h1 >RoboFriends</h1>
-                <div className='searchBox'>
-                  <SearchBox searchChange={this.onSearchChange} />
-                </div>
-            </div>
-            <div className='g-right' >
-              <Router>
-                <div >
-                  <Sidebar  />
-                </div>
-              </Router>
-              {/* <button><a href="https://github.com/vincent-lee-gh" target="_blank"><SiGithub size='2.5em' /></a> </button> */}
-              
-            </div>
-            
-          </div>
           
+          {
+          <div className='searchBox' >
+              <SearchBox searchChange={this.onSearchChange} />
+          </div>
+          }
+
+
           <div className='cardList'>
             <Scroll>
                 <ErrorBoundry>
@@ -76,7 +67,10 @@ componentDidMount(){
             </Scroll>
             
           </div>
+
+        
       </div>
+
       );
     } 
   }

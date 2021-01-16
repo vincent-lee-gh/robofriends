@@ -39,7 +39,7 @@ const SidebarLabel = styled.span `
   margin-left: 16px;
 `;
 
-const DropdownLink = styled(Link) `
+const DropdownLink = styled.a `
   display: flex;
   /* align-self: flex-start; */
   /* justify-self: flex-start; */
@@ -61,7 +61,7 @@ const DropdownLink = styled(Link) `
     color  500ms ease-in-out,
     ;
 
-  &:hover {
+  &:hover, :focus {
     color: #FFFFFF;
     background-color: #252831;
     /* border-left: 15px solid #2cb9e4; */
@@ -74,10 +74,7 @@ const SubMenu = ({ item }) => {
 
   const showSubnav = () => setSubnav(!subnav);
 
-const openInNewTab = (url) => {
-  const newWindow = window.open( `${url}`, '_blank', 'noopener,noreferrer')
-  // if (newWindow) newWindow.opener = null
-}
+
 // onClick={ openInNewTab(`${item.link}`)}
 
   return (
@@ -101,16 +98,13 @@ const openInNewTab = (url) => {
         {subnav && 
         item.subNav.map( ( item, index ) => {
           return (
-            <DropdownLink to={item.path} key={index} >
-              <div >
+            <DropdownLink to={item.path} key={index} href={item.path}>
+             
               { item.icon }
               <SidebarLabel > {item.title} </SidebarLabel>
-              <div>
-                {<a href={`${item.link }`}></a> 
-                  ? item.path
-                  : null}
-              </div>
-              </div>
+              {/* <a href={item.path} target="_blank" >
+              </a> */}
+                
               
             </DropdownLink>
           );
