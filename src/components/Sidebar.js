@@ -2,21 +2,14 @@ import React, {useState} from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as CgIcons from 'react-icons/cg';
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
-import * as RiIcons from 'react-icons/ri';
-import * as SiIcons from 'react-icons/si';
-import * as BiIcons from 'react-icons/bi';
 import {SidebarData} from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
-const Nav = styled.div`
+const Nav = styled.div `
   opacity: ${({ sidebar }) => (sidebar ? '0' : '100%' )};
 
-  
-  }
 `;
 
 const NavIcon = styled(Link)`
@@ -82,14 +75,11 @@ const SubMenuWrapper = styled.div `
   
 `;
 
-const openInNewTab = (url) => {
-  const newWindow = window.open( `${url}`, '_blank', 'noopener,noreferrer')
-  // if (newWindow) newWindow.opener = null
-}
+
 
 const Sidebar = () => {
 
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState();
 
   const showSidebar = () => setSidebar(!sidebar);
 

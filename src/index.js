@@ -4,7 +4,7 @@ import './index.css';
 import './containers/App.css'
 import  App  from './containers/App';
 import SearchBox from './components/SearchBox';
-import {BrowserRouter as Router, Switch, Route,  withRouter } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import About from './pages/About';
 import Sidebar from './components/Sidebar';
 import reportWebVitals from './reportWebVitals';
