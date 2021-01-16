@@ -74,14 +74,19 @@ const SubMenu = ({ item }) => {
 
   const showSubnav = () => setSubnav(!subnav);
 
+const openInNewTab = (url) => {
+  const newWindow = window.open( `${url}`, '_blank', 'noopener,noreferrer')
+  // if (newWindow) newWindow.opener = null
+}
+// onClick={ openInNewTab(`${item.link}`)}
+
   return (
     <>
         <SidebarLink 
           to={item.path} 
-          onClick={item.subNav && showSubnav}
-          href={item.link}
+          onClick={(item.subNav && showSubnav) || item.link}
           >
-          <div>
+          <div >
             {item.icon}
             <SidebarLabel> {item.title} </SidebarLabel>
           </div>
@@ -97,8 +102,16 @@ const SubMenu = ({ item }) => {
         item.subNav.map( ( item, index ) => {
           return (
             <DropdownLink to={item.path} key={index} >
+              <div >
               { item.icon }
-              <SidebarLabel> {item.title} </SidebarLabel>
+              <SidebarLabel > {item.title} </SidebarLabel>
+              <div>
+                {<a href={`${item.link }`}></a> 
+                  ? item.path
+                  : null}
+              </div>
+              </div>
+              
             </DropdownLink>
           );
         })}
