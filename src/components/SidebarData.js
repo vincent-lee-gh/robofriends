@@ -14,9 +14,6 @@ export const SidebarData = [
   },
   {
     title: 'Info',
-    // path: '' ,
-    // link: 'https://vincent-lee-gh.github.io/robofriends/',
-    // https://vincent-lee-gh.github.io/robofriends/
     icon: <FaIcons.FaInfoCircle />,
     iconClosed: <RiIcons.RiArrowDownFill />,
     iconOpened: <RiIcons.RiArrowUpFill />,
@@ -42,6 +39,7 @@ export const SidebarData = [
       },
     ],
   },
+  
   
 ]
 
