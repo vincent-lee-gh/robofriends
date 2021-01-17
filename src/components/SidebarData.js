@@ -21,21 +21,22 @@ export const SidebarData = [
     iconClosed: <RiIcons.RiArrowDownFill />,
     iconOpened: <RiIcons.RiArrowUpFill />,
     subNav: [
-      // {
-      //   title: 'About',
-      //   path: '/info/about',
-      //   icon:  <BiIcons.BiGlasses />,
-      // },
+      {
+        title: 'About',
+        path: '/info/about',
+        link: '',
+        icon:  <BiIcons.BiGlasses />,
+      },
       {
         title: 'Repo',
-        // path: 'https://github.com/vincent-lee-gh/robofriends/tree/main',
+        path: '',
         link: 'https://github.com/vincent-lee-gh/robofriends/tree/main',
         // path: '/info/repo',
         icon:  <BiIcons.BiGitRepoForked />,
       },
       {
         title: 'MyGithub',
-        // path: '',
+        path: '',
         link: 'https://github.com/vincent-lee-gh',
         icon:  <SiIcons.SiGithub />,
       },

@@ -39,7 +39,7 @@ const SidebarLabel = styled.span `
   margin-left: 16px;
 `;
 
-const DropdownLink = styled.a `
+const DropdownLink = styled(Link) `
   display: flex;
   /* align-self: flex-start; */
   /* justify-self: flex-start; */
@@ -123,41 +123,6 @@ const openInNewTab = (url) => {
   return null;
 }
 
-const toLink = () => {
-  if (item.link === null){
-    subnav && 
-    item.subNav.map( ( item, index ) => {
-      // if(item.link === null){
-        return ( 
-          <DropdownLink to={item.path } key={index} >
-            {/* href={item.path} */}
-            { item.icon }
-            <SidebarLabel > {item.title} </SidebarLabel>
-            {/* <a href={item.path} target="_blank" >
-            </a> */}
-          </DropdownLink>
-        );
-      // }
-      
-    })
-  }else{
-    subnav && 
-          item.subNav.map( ( item, index ) => {
-            // if(item.link === null){
-              return ( 
-                <DropdownLinkExternal to={item.path } key={index} >
-                  {/* href={item.path} */}
-                  { item.icon }
-                  <SidebarLabel > {item.title} </SidebarLabel>
-                  {/* <a href={item.path} target="_blank" >
-                  </a> */}
-                </DropdownLinkExternal>
-              );
-            // }
-            
-          })
-  }
-}
 
 // onClick={ openInNewTab(`${item.link}`)}
 
@@ -184,9 +149,9 @@ const toLink = () => {
 
         {subnav && 
           item.subNav.map( ( item, index ) => {
-            // if(item.link === null){
+            if(item.link < item.path){
               return ( 
-                <DropdownLink to={item.path } key={index} href={item.link}>
+                <DropdownLink to={item.path } key={index} >
                   {/* href={item.path} */}
                   { item.icon }
                   <SidebarLabel > {item.title} </SidebarLabel>
@@ -194,7 +159,17 @@ const toLink = () => {
                   </a> */}
                 </DropdownLink>
               );
-            // }
+            }else {
+              return (
+                <DropdownLinkExternal to={item.link } key={index} href={item.link} target="_blank" >
+                  {/* href={item.path} */}
+                  { item.icon }
+                  <SidebarLabel > {item.title} </SidebarLabel>
+                  {/* <a href={item.path} target="_blank" >
+                  </a> */}
+                </DropdownLinkExternal>
+              )
+            }
             
           })}
 
